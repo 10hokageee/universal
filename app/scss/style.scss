@@ -1,5 +1,880 @@
-@import 'vars';
-@import 'fonts';
-@import 'global';
-@import 'media';
-@import 'reset';
+@import "vars";
+@import "fonts";
+@import "global";
+@import "reset";
+@import "fonts";
+@import "libs";
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $border-color;
+
+  &__form {
+    padding-left: 25px;
+  }
+
+  &__btn {
+    @extend %robotoslab-700;
+    position: relative;
+    padding: 15px 25px 15px 0;
+    border-right: 1px solid $gray;
+    @extend %transition;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__label {
+    position: relative;
+    padding-left: 55px;
+
+    & svg {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      fill: $gray;
+      left: 0;
+    }
+  }
+
+  &__input {
+    border: none;
+    padding-left: 10px;
+    width: 730px;
+  }
+
+  &__link {
+    display: flex;
+    margin-right: 25px;
+    align-items: center;
+    @extend %transition;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__img {
+    border: 2px solid $gray;
+    margin-right: 10px;
+  }
+
+  &__user-nav {
+    display: flex;
+  }
+
+  &__sub {
+    font-size: 12px;
+    @extend %robotoslab-700;
+    line-height: 15px;
+    display: block;
+    max-width: 119px;
+  }
+
+  &__price {
+    font-size: 12px;
+    line-height: 15px;
+    color: $gray;
+    display: block;
+  }
+
+  &__button {
+    position: relative;
+    padding-left: 30px;
+    color: $gray;
+    @extend %transition;
+
+    & svg {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      fill: $gray;
+      @extend %transition;
+    }
+
+    &:hover {
+      color: $bg-gray;
+    }
+
+    &:hover svg {
+      fill: $bg-gray;
+    }
+  }
+}
+
+.header-middle {
+  display: flex;
+  align-items: center;
+
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  &__content-img {
+    margin-right: 15px;
+  }
+
+  &__content-text {
+    color: $dark-gray;
+  }
+
+  &__info {
+    display: flex;
+    color: $dark-gray;
+  }
+
+  &__info-data {
+    margin-right: 23px;
+  }
+
+  &__info-temperature {
+    padding-left: 30px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-image: url("../images/icons/sun.svg");
+    }
+  }
+}
+
+.header-nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 0;
+  }
+
+  &__list-item {
+    color: $white;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    @extend %robotoslab-700;
+    @extend %transition;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.promo {
+  padding: 30px 0;
+
+  &__list-items {
+    display: flex;
+    padding: 25px 25px 30px 25px;
+    background-color: $dark-gray;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 25px;
+    @extend %robotoslab-700;
+    color: $white;
+    padding: 0 25px;
+
+    &:not(:last-child) {
+      border-right: 1px solid $light-gray;
+    }
+
+    &:first-child {
+      padding-left: 0;
+      padding-right: 25px;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      padding-left: 25px;
+    }
+  }
+
+  &__list-text {
+    max-width: 154px;
+    width: 100%;
+    margin-right: 15px;
+  }
+}
+
+.promo-user {
+  display: flex;
+
+  &__avatar {
+    background-repeat: no-repeat;
+    background-size: 877px 570px;
+    background-position: left;
+    padding: 55px 50px 95px 55px;
+    position: relative;
+    border-radius: 10px 0 0 10px;
+    z-index: 10;
+    min-height: 570px;
+    display: flex;
+    flex-direction: column;
+    max-width: 877px;
+    width: 100%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: rgba(64, 48, 61, 0.35);
+    }
+  }
+
+  &__prof {
+    display: flex;
+    align-items: center;
+  }
+
+  &__prof-img {
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  &__prof-name {
+    color: $white;
+    opacity: 0.85;
+  }
+
+  &__prof-info {
+    font-size: 12px;
+    opacity: 0.4;
+    color: $white;
+    line-height: 15px;
+    display: block;
+  }
+
+  &__content {
+    margin-top: auto;
+  }
+
+  &__content-subtitle {
+    color: $dark-aqua;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+
+  &__content-title {
+    font-size: 40px;
+    line-height: 50px;
+    @extend %robotoslab-700;
+    color: $white;
+    max-width: 598px;
+    margin-bottom: 45px;
+  }
+
+  &__content-play {
+    display: flex;
+  }
+
+  &__content-link {
+    margin-right: 30px;
+  }
+
+  &__content-btn {
+    color: $white;
+    opacity: 0.85;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 60px;
+    @extend %transition;
+
+    & time {
+      font-size: 12px;
+      line-height: 15px;
+      opacity: 0.4;
+    }
+
+    & svg {
+      width: 50px;
+      height: 50px;
+      fill: $white;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+      padding: 15px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      @extend %transition;
+    }
+
+    &:hover {
+      color: $aqua;
+    }
+
+    &:hover svg {
+      fill: aqua;
+      border: 1px solid $aqua;
+    }
+  }
+
+  &__sidebar-title {
+    padding: 20px 25px 19px 25px;
+    text-align: center;
+    color: $bg-gray;
+  }
+
+  &__sidebar-items {
+    background-color: $white;
+    text-align: left;
+    color: $dark-gray;
+    border-radius: 0 10px 10px 0;
+  }
+
+  &__sidebar-content {
+    padding: 18px 25px 19px 25px;
+    border-top: 1px solid $light-gray;
+  }
+
+  &__sidebar-subtitle {
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: block;
+
+    &--aqua {
+      color: $aqua;
+    }
+
+    &--blue {
+      color: $blue;
+    }
+
+    &--purple {
+      color: $purple;
+    }
+
+    &--orange {
+      color: $orange;
+    }
+
+    &--green {
+      color: $light-green;
+    }
+  }
+
+  &__sidebar-title {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  &__sidebar-btn {
+    text-align: left;
+    padding-right: 30px;
+    position: relative;
+    display: block;
+    @extend %transition;
+
+    & svg {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      border: 1px solid $light-gray;
+      padding: 5px;
+      border-radius: 50%;
+      opacity: 0;
+      @extend %transition;
+    }
+
+    &:hover {
+      color: black;
+    }
+
+    &:hover svg {
+      opacity: 1;
+    }
+  }
+}
+
+.preview {
+  padding: 30px 0 60px 0;
+  background-color: #edeff0;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__list-items {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__list-item {
+    border-radius: 10px;
+  }
+
+  &__bottom-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    min-height: 375px;
+  }
+
+  &__bottom-item {
+    max-width: 263px;
+    width: 100%;
+    background-color: $white;
+    border-radius: 10px;
+
+    &:nth-child(1) {
+      grid-row: span 2;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5) {
+      padding: 25px 25px 30px 25px;
+    }
+  }
+
+  &__bottom-item-title {
+    font-size: 16px;
+    line-height: 25px;
+    @extend %robotoslab-700;
+
+    &--animal {
+      padding: 15px 25px 30px 25px;
+    }
+  }
+
+  &__bottom-item-text {
+    color: $dark-gray;
+    margin-bottom: 10px;
+  }
+
+  &__bottom-item-date {
+    font-size: 12px;
+    line-height: 15px;
+    color: $light-gray;
+  }
+
+  &__sidebar {
+    max-width: 263px;
+    width: 100%;
+    background-color: $aqua-gray;
+    border-radius: 10px;
+  }
+
+  &__sidebar-item {
+    padding: 45px 25px;
+    border-top: 1px solid rgb(180, 209, 224, 0.5);
+    position: relative;
+    z-index: 10;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 35px;
+      background-image: url("../images/icons/quote.svg");
+      width: 40px;
+      height: 40px;
+      z-index: -1;
+      left: 15px;
+    }
+  }
+
+  &__sidebar-item-title {
+    color: $white;
+    padding: 20px 25px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  &__sidebar-text {
+    @extend %robotoslab-700;
+    font-size: 20px;
+    line-height: 25px;
+    color: $white;
+    margin-bottom: 19px;
+  }
+
+  &__sidebar-name {
+    color: $gray-blue;
+    position: relative;
+  }
+
+  &__sidebar-link {
+    display: flex;
+    align-items: center;
+  }
+
+  &__sidebar-img {
+    margin-right: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__sidebar-work {
+    display: block;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  &__sidebar-btn {
+    border-top: 1px solid rgb(180, 209, 224, 0.5);
+    @extend %robotoslab-700;
+    display: block;
+    padding: 24px 96px;
+    text-align: center;
+    color: $white;
+  }
+
+  .preview-lists {
+    margin-right: 30px;
+  }
+}
+
+.preview-cars {
+  padding: 35px 0 18px 35px;
+  max-width: 555px;
+  width: 100%;
+  background-color: #fff;
+
+  &__list-content {
+    display: flex;
+  }
+
+  &__list-name {
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: $blue;
+    display: block;
+  }
+
+  &__list-title {
+    font-size: 25px;
+    line-height: 30px;
+    @extend %robotoslab-700;
+    margin-bottom: 25px;
+    max-width: 238px;
+    width: 100%;
+  }
+
+  &__list-text {
+    max-width: 238px;
+    width: 100%;
+  }
+
+  &__list-reviews {
+    padding-top: 12px;
+    border-top: 1px solid $border-color;
+  }
+
+  &__list-author {
+    padding-left: 40px;
+    position: relative;
+    @extend %robotoslab-700;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 30px;
+      background-image: url("../images/preview/author.jpg");
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__list-link:hover svg {
+    fill: $pink;
+  }
+
+  &__list-review {
+    margin: 0 15px 0 5px;
+    @extend %lato-400;
+  }
+
+  &__list-comments {
+    padding-left: 20px;
+    @extend %lato-400;
+    color: $light-gray;
+    position: relative;
+
+    & svg {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      fill: $gray;
+      @extend %transition;
+    }
+  }
+}
+
+.preview-popular {
+  padding: 23px 25px 30px 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 263px;
+  width: 100%;
+  z-index: 10;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    margin-top: auto;
+  }
+
+  &__subtitle {
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: $purple;
+    margin-bottom: 10px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(64, 48, 61, 0.35);
+    border-radius: 10px;
+    z-index: -1;
+  }
+
+  &__text {
+    font-size: 16px;
+    @extend %robotoslab-700;
+    color: $white;
+    line-height: 25px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  &__author {
+    padding-left: 55px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: translateY(-50%);
+      top: 50%;
+      left: 0;
+      background-image: url("../images/preview/author.jpg");
+      z-index: 15;
+    }
+
+    &:hover svg {
+      fill: $pink;
+    }
+  }
+
+  &__name {
+    color: $white;
+    opacity: 0.85;
+    margin-bottom: 5px;
+  }
+
+  &__profile {
+    opacity: 0.4;
+    font-size: 12px;
+    line-height: 15px;
+    color: $white;
+  }
+
+  &__date {
+    margin-right: 10px;
+  }
+
+  &__likes {
+    padding-left: 20px;
+    position: relative;
+
+    & svg {
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 15px;
+      height: 15px;
+      fill: $white;
+      @extend %transition;
+    }
+  }
+
+  &__reviews {
+    padding-left: 20px;
+    position: relative;
+    margin-right: 10px;
+
+    & svg {
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 15px;
+      height: 15px;
+      fill: $white;
+      @extend %transition;
+    }
+  }
+
+  &--popular {
+    &:before {
+      content: "Popular";
+      color: $white;
+      padding: 5px 12px;
+      background-color: $light-green;
+      border-radius: 3px;
+      position: absolute;
+      top: 18px;
+    }
+  }
+}
+
+.advertisement {
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0 55px 0;
+
+  &__title {
+    font-size: 40px;
+    line-height: 50px;
+    @extend %robotoslab-700;
+    color: $white;
+    margin-bottom: 25px;
+  }
+}
+
+.articles {
+  padding-top: 60px;
+
+  &__list {
+    border-radius: 10px;
+    background-color: $white;
+  }
+
+  &__list-item {
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    max-width: 848px;
+    position: relative;
+    border-bottom: 1px solid #D9DADB;
+    
+    & svg {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      fill: $gray;
+      top: 25px;
+      right: 25px;
+    }
+  }
+
+  &__list-item-img {
+    margin-right: 25px;
+  }
+
+  &__list-item-subtitle {
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 15px;
+    color: $dark-aqua;
+  }
+
+  &__list-item-title {
+    @extend %robotoslab-700;
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 10px;
+  }
+
+  &__list-item-text {
+    margin-bottom: 20px;
+    color: $dark-gray;
+  }
+
+  &__list-item-date {
+    color: $light-gray;
+    margin-right: 10px;
+  }
+
+  &__list-item-comments {
+    padding-left: 20px;
+    margin-right: 10px;
+    color: $light-gray;
+    position: relative;
+
+    & svg {
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      fill: $gray;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+  }
+
+  &__list-item-likes {
+    padding-left: 20px;
+    color: $light-gray;
+    position: relative;
+
+    & svg {
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      fill: $gray;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+  }
+}

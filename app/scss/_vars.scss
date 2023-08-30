@@ -1,0 +1,36 @@
+$bg-gray: #262D33;
+$white: #fff;
+$aqua: #3BBDC4;
+$dark-aqua: #4592FF;
+$pink: #EB5757;
+$gray: #BCBFC2;
+$dark-gray: #4B5157;
+$aqua-gray: #6E99AE;
+$light-green: #3DC47E;
+$light-gray: #939699;
+$border-color: #D9DADB;
+$blue: #6E99AE;
+$purple: #AC8EE3;
+$orange: #FFA34D;
+$gray-blue: #D1E2EB;
+
+
+
+%robotoslab-700 {
+  font-family: "RobotoSlab-Bold";
+  font-weight: 700;
+}
+
+%lato-400 {
+  font-family: "Lato-Regular";
+  font-weight: 400;
+}
+
+%transition {
+  transition: background-color 0.3s ease-in-out,
+    text-decoration 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    opacity 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out,
+    fill 0.3s ease-in-out, border 0.3s ease-in-out,
+    background-color 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    translate 0.3s ease-in-out, stroke 0.3s ease-in-out;
+}

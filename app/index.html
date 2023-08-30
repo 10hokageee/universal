@@ -1,16 +1,616 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
-<body>
-  
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Universal</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-top">
+          <button class="header-top__btn" type="button">Sections</button>
 
+          <form class="header-top__form" action="#">
+            <label class="header-top__label" for="search">
+              <input
+                class="header-top__input"
+                id="search"
+                type="search"
+                placeholder="Search"
+              />
+              <svg>
+                <use xlink:href="images/sprite.svg#search"></use>
+              </svg>
+            </label>
+          </form>
 
-  <script src="js/main.min.js"></script>
-</body>
+          <div class="header-top__user-nav">
+            <a class="header-top__link" href="#">
+              <img
+                class="header-top__img"
+                src="images/subs.jpg"
+                alt="subscribe"
+              />
+              <div class="header-top__info">
+                <p class="header-top__sub">Subscribe Now</p>
+                <p class="header-top__price">3 month for $19</p>
+              </div>
+            </a>
+
+            <button class="header-top__button">
+              Sign In
+              <svg>
+                <use xlink:href="images/sprite.svg#user"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="header-middle">
+          <div class="header-middle__content">
+            <img
+              class="header-middle__content-img"
+              src="images/new-york.jpg"
+              alt=""
+            />
+            <p class="header-middle__content-text">
+              Boston and New York Bear Brunt
+            </p>
+          </div>
+
+          <a class="header-logo" href="#">
+            <img class="logo" src="images/icons/logo.svg" alt="" />
+          </a>
+
+          <div class="header-middle__info">
+            <time class="header-middle__info-data"
+              >Monday, January 1, 2018</time
+            >
+            <span class="header-middle__info-temperature">- 23 °C</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-wrapper">
+        <div class="container">
+          <nav class="header-nav">
+            <ul class="header-nav__list">
+              <li class="header-nav__list-item">
+                <a class="header-nav__list-link" href="#">News</a>
+              </li>
+              <li class="header-nav__list-item">
+                <a class="header-nav__list-link" href="#">Opinion</a>
+              </li>
+              <li class="header-nav__list-item">
+                <a class="header-nav__list-link" href="#">Science</a>
+              </li>
+              <li class="header-nav__list-item">
+                <a class="header-nav__list-link" href="#">Life</a>
+              </li>
+              <li class="header-nav__list-item">
+                <a class="header-nav__list-link" href="#">Travel</a>
+              </li>
+              <li class="header-nav__list-item">
+                <a class="header-nav__list-link" href="#">Moneys</a>
+              </li>
+              <li class="header-nav__list-item">
+                <a class="header-nav__list-link" href="#">Art & Design</a>
+              </li>
+              <li class="header-nav__list-item">
+                <a class="header-nav__list-link" href="#">Sports</a>
+              </li>
+              <li class="header-nav__list-item">
+                <a class="header-nav__list-link" href="#">People</a>
+              </li>
+              <li class="header-nav__list-item">
+                <a class="header-nav__list-link" href="#">Health</a>
+              </li>
+              <li class="header-nav__list-item">
+                <a class="header-nav__list-link" href="#">Education</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="promo">
+        <div class="container">
+          <ul class="promo__list-items">
+            <li class="promo__list-item">
+              <p class="promo__list-text">
+                25 Songs That Tell Us Where Music Is Going
+              </p>
+              <img
+                class="promo__list-img"
+                src="images/promo/promo1.jpg"
+                alt=""
+              />
+            </li>
+            <li class="promo__list-item">
+              <p class="promo__list-text">
+                These Ancient Assassins Eat Their Own Kind
+              </p>
+              <img
+                class="promo__list-img"
+                src="images/promo/promo1.jpg"
+                alt=""
+              />
+            </li>
+            <li class="promo__list-item">
+              <p class="promo__list-text">
+                How Do You Teach People to Love Difficult Music?
+              </p>
+              <img
+                class="promo__list-img"
+                src="images/promo/promo1.jpg"
+                alt=""
+              />
+            </li>
+            <li class="promo__list-item">
+              <p class="promo__list-text">
+                International Soccer’s Man of Mystery
+              </p>
+              <img
+                class="promo__list-img"
+                src="images/promo/promo1.jpg"
+                alt=""
+              />
+            </li>
+          </ul>
+
+          <div class="promo-user">
+            <div
+              class="promo-user__avatar"
+              style="background-image: url(images/promo-bg.jpg)"
+            >
+              <div class="promo-user__prof">
+                <img class="promo-user__prof-img" src="images/avatar.jpg" alt="" />
+                  <p class="promo-user__prof-name">By Benjamin Turner
+                    <span class="promo-user__prof-info">Traveler</span>
+                  </p>                 
+              </div>
+
+              <div class="promo-user__content">
+                <span class="promo-user__content-subtitle">Destinations</span>
+                <h1 class="promo-user__content-title">In Southeast England, White Cliffs and Fish</h1>
+
+                 <div class="promo-user__content-play">
+                  <a class="promo-user__content-link btn" href="#">Read more
+                    <svg>
+                      <use xlink:href="images/sprite.svg#arrow"></use>
+                    </svg>
+                  </a>
+                   <a data-fancybox class="promo-user__content-btn" href="https://youtu.be/TrapRH0DSbg?si=CdHtTQyx51xcpBl3">The chalk cliff of Beachy Head
+                    <svg>
+                      <use xlink:href="images/sprite.svg#play-item"></use>
+                    </svg>
+                    <time>18:05</time>
+                  </a>
+                 </div>
+              </div>
+            </div>
+
+            <ul class="promo-user__sidebar-items">
+
+              <li class="promo-user__sidebar-item">
+                <h2 class="promo-user__sidebar-title">Recommended for you</h2>
+              </li>
+            
+              <li class="promo-user__sidebar-item">
+                <div class="promo-user__sidebar-content">
+                  <span class="promo-user__sidebar-subtitle promo-user__sidebar-subtitle--aqua">
+                    Food
+                  </span>
+                  <a class="promo-user__sidebar-btn" data-fancybox href="https://www.youtube.com/watch?v=Nik1O5XEBR0">For Chicken-Fried Steak, Too Much Is Just Enough
+                    <svg>
+                      <use xlink:href="images/sprite.svg#play-item"></use>
+                    </svg>
+                  </a>
+                </div>
+              </li>
+            
+              <li class="promo-user__sidebar-item">
+                <div class="promo-user__sidebar-content">
+                  <span class="promo-user__sidebar-subtitle promo-user__sidebar-subtitle--blue">
+                    Cars
+                  </span>
+                  <a class="promo-user__sidebar-btn" data-fancybox href="https://www.youtube.com/watch?v=-zgbpAa0crc">Storm Has Car Dealers Doing Swift Business
+                    <svg>
+                      <use xlink:href="images/sprite.svg#play-item"></use>
+                    </svg>
+                  </a>
+                </div>
+              </li>
+            
+              <li class="promo-user__sidebar-item">
+                <div class="promo-user__sidebar-content">
+                  <span class="promo-user__sidebar-subtitle promo-user__sidebar-subtitle--purple">
+                    Movies
+                  </span>
+                  <a class="promo-user__sidebar-btn" data-fancybox href="https://www.youtube.com/watch?v=Mjn2CWZTl5s">War Is Hell? In New Military Dramas, It’s One-Dimensional
+                    <svg>
+                      <use xlink:href="images/sprite.svg#play-item"></use>
+                    </svg>
+                  </a>
+                </div>
+              </li>
+            
+              <li class="promo-user__sidebar-item">
+                <div class="promo-user__sidebar-content">
+                  <span class="promo-user__sidebar-subtitle promo-user__sidebar-subtitle--orange">
+                    NFL
+                  </span>
+                  <a class="promo-user__sidebar-btn" data-fancybox href="https://www.youtube.com/watch?v=ZCwiNW6Dmdg">11 surprising stat rankings for active NFL players
+                    <svg>
+                      <use xlink:href="images/sprite.svg#play-item"></use>
+                    </svg>
+                  </a>
+                </div>
+              </li>
+            
+              <li class="promo-user__sidebar-item">
+                <div class="promo-user__sidebar-content">
+                  <span class="promo-user__sidebar-subtitle promo-user__sidebar-subtitle--green">
+                    Tech Reviews
+                  </span>
+                  <a class="promo-user__sidebar-btn" data-fancybox href="https://www.youtube.com/watch?v=ZztInO6swB4">The bookcases you can buy online and assemble yourself
+                    <svg>
+                      <use xlink:href="images/sprite.svg#play-item"></use>
+                    </svg>
+                  </a>
+                </div>
+              </li>
+            
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <section class="preview">
+        <div class="container">
+          <div class="preview__inner">
+          <div class="preview-lists">
+            <ul class="preview__list-items">
+              <li class="preview__list-item preview-cars">
+                  <div class="preview-cars__list-content">
+                    <div class="preview-cars__list-info">
+                      <span class="preview-cars__list-name">Cars</span>
+                      <h2 class="preview-cars__list-title">
+                        The joy of replicas: A $ 5 million car for $ 50,000
+                      </h2>
+                    <p class="preview-cars__list-text">The 31-year-old self-taught engineer and former amateur racer spends his days building artful recreations of one of most iconic sports cars</p> 
+                    </div>  
+                    <img class="preview-cars__list-img" src="images/preview/car.jpg" alt="">               
+                  </div>      
+
+                <div class="preview-cars__list-reviews">
+                  <a class="preview-cars__list-link" href="#">
+                  <p class="preview-cars__list-author">
+                    Jessica Miller:
+                    <span class="preview-cars__list-review">
+                      Even as the ride-hailing service’s future remem…
+                    </span>
+                    <span class="preview-cars__list-comments">342
+                      <svg>
+                        <use xlink:href="images/sprite.svg#review"></use>
+                      </svg>
+                    </span>
+                  </p>
+                </a>
+                </div>
+              </li>
+
+              <li class="preview__list-item preview-popular preview__list-item preview-popular--popular" style="background-image: url(images/preview/preview-bg.jpg);">
+                <div class="preview-popular__content">
+                  <span class="preview-popular__subtitle">Art & Design</span>  
+                  <p class="preview-popular__text">
+                    Invisible ink: the weird world of tattoo removal – in pictures
+                  </p>  
+                  
+               <div class="preview-popular__author">
+                <a href="#">
+                  <span class="preview-popular__name">By Sarah Jenkins</span>  
+                    <div class="preview-popular__profile">
+                    <time class="preview-popular__date">Sept 26</time>
+                    <span class="preview-popular__reviews">16
+                      <svg>
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </span>  
+                    <span class="preview-popular__likes">
+                      832
+                      <svg>
+                        <use xlink:href="images/sprite.svg#review"></use>
+                      </svg></span>                                 
+                  </div>
+                </a>
+                </div>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="preview__bottom-list">
+
+              <li class="preview__bottom-item">
+                <img class="preview__bottom-item-img" src="images/preview/preview-cat.jpg" alt="">
+                <h2 class="preview__bottom-item-title preview__bottom-item-title--animal">200+ Doomed Cats Saved From Euthanization</h2>
+              </li>
+
+              <li class="preview__bottom-item">
+                <h2 class="preview__bottom-item-title">
+                  Is Coffee Bad for Bones?
+                </h2>
+                <p class="preview__bottom-item-text">Coffee drinkers may excrete more calcium, but it doesn’t appear to weaken bones</p>
+                <span class="preview__bottom-item-date">Oct 15</span>
+              </li>
+
+              <li class="preview__bottom-item">
+                <h2 class="preview__bottom-item-title">
+                  What We Manufacture
+                </h2>
+                <p class="preview__bottom-item-text">A global history of the factory and the modern world that all should read</p>
+                <span class="preview__bottom-item-date">Oct 14</span>
+              </li>
+
+              <li class="preview__bottom-item">
+                <h2 class="preview__bottom-item-title">
+                  It’s a Stressful World
+                </h2>
+                <p class="preview__bottom-item-text">Can a cruise skeptic enjoy four days on the seas with his family and a bunch of princesses?</p>
+                <span class="preview__bottom-item-date">Oct 13</span>
+              </li>
+
+              <li class="preview__bottom-item">
+                <h2 class="preview__bottom-item-title">
+                  A Treat for Lemon Lovers
+                </h2>
+                <p class="preview__bottom-item-text">This tangerine, ginger and chocolate tart has verve, depth and a hint of spice</p>
+                <span class="preview__bottom-item-date">Oct 12</span>
+              </li>
+
+            </ul>
+          </div>
+          
+          <ul class="preview__sidebar">
+            <li class="preview__sidebar-item-title">
+                Columns
+            </li>
+
+            <li class="preview__sidebar-item">
+              <p class="preview__sidebar-text">
+                Architecture is the thoughtful making of space
+              </p> 
+              <a class="preview__sidebar-link" href="#">
+                <img class="preview__sidebar-img" width="45" height="45" src="images/avatar.jpg" alt="">
+              <p class="preview__sidebar-name">
+                David Williams
+                <span class="preview__sidebar-work">Architect</span> 
+              </p>
+            </a>
+            </li>
+            <li class="preview__sidebar-item">
+              <p class="preview__sidebar-text">
+                The details are not the details. They make the design.
+              </p> 
+              <a class="preview__sidebar-link" href="#">
+                <img class="preview__sidebar-img" src="images/avatar.jpg" width="45" height="45" alt="">
+              <p class="preview__sidebar-name">
+                Alexandra Green
+                <span class="preview__sidebar-work">Interior designer</span> 
+              </p>
+            </a>
+            </li>
+            <li class="preview__sidebar-item">
+              <p class="preview__sidebar-text">
+                Live life to the fullest, and focus on the positive
+              </p> 
+              <a class="preview__sidebar-link" href="#">
+                <img class="preview__sidebar-img" width="45" height="45" src="images/avatar.jpg" alt="">
+              <p class="preview__sidebar-name">
+                Olivia Thompson
+                <span class="preview__sidebar-work">Coacher</span> 
+              </p>
+            </a>
+            </li>
+
+            <li class="preview__sidebar-item-link">
+              <a class="preview__sidebar-btn" href="#">Read more</a>
+            </li>
+          </ul>
+
+        </div>
+        </div>
+      </section>
+
+      <section class="advertisement" style="background-image: url(images/advertisement-bg.jpg);">
+          <div class="container"> 
+            <h2 class="advertisement__title">
+              The Big Bloom or «How Flowering
+              Plants Changed the World»
+            </h2>  
+            
+            <a class="advertisement__link btn" href="#" >Read more
+              <svg>
+                <use xlink:href="images/sprite.svg#arrow"></use>
+              </svg>
+            </a>
+          </div>
+      </section>
+
+      <section class="articles">
+        <div class="container">
+          <div class="articles__inner">
+            <ul class="articles__list">
+              <li class="articles__list-item">
+                <svg>
+                  <use xlink:href="images/sprite.svg#bookmark"></use>
+                </svg> 
+                <img class="articles__list-item-img" src="images/articles/articles-1.jpg" alt="">
+                <div class="articles__list-item-content">
+                  <span class="articles__list-item-subtitle">
+                    Flights
+                  </span>
+                  <h2 class="articles__list-item-title">
+                    Passengers Suffer as Crowded Field Puts Pressure on Europe’s Airlines
+                  </h2>
+                  <p class="articles__list-item-text">Weaker carriers have fallen by the wayside amid fierce competition, while others have been hit by bad luck. The result: thousands of canceled flights.</p>
+                  <time class="articles__list-item-date">Aug 6</time>
+                  <span class="articles__list-item-comments">342
+                    <svg>
+                      <use xlink:href="images/sprite.svg#review"></use>
+                    </svg>
+                  </span> 
+                  <span class="articles__list-item-likes">830
+                    <svg>
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </span> 
+                </div>           
+              </li>
+              <li class="articles__list-item">
+                <svg>
+                  <use xlink:href="images/sprite.svg#bookmark"></use>
+                </svg> 
+                <img class="articles__list-item-img" src="images/articles/articles-1.jpg" alt="">
+                <div class="articles__list-item-content">
+                  <span class="articles__list-item-subtitle">
+                    Flights
+                  </span>
+                  <h2 class="articles__list-item-title">
+                    Passengers Suffer as Crowded Field Puts Pressure on Europe’s Airlines
+                  </h2>
+                  <p class="articles__list-item-text">Weaker carriers have fallen by the wayside amid fierce competition, while others have been hit by bad luck. The result: thousands of canceled flights.</p>
+                  <time class="articles__list-item-date">Aug 6</time>
+                  <span class="articles__list-item-comments">342
+                    <svg>
+                      <use xlink:href="images/sprite.svg#review"></use>
+                    </svg>
+                  </span> 
+                  <span class="articles__list-item-likes">830
+                    <svg>
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </span> 
+                </div>           
+              </li>
+              <li class="articles__list-item">
+                <svg>
+                  <use xlink:href="images/sprite.svg#bookmark"></use>
+                </svg> 
+                <img class="articles__list-item-img" src="images/articles/articles-1.jpg" alt="">
+                <div class="articles__list-item-content">
+                  <span class="articles__list-item-subtitle">
+                    Flights
+                  </span>
+                  <h2 class="articles__list-item-title">
+                    Passengers Suffer as Crowded Field Puts Pressure on Europe’s Airlines
+                  </h2>
+                  <p class="articles__list-item-text">Weaker carriers have fallen by the wayside amid fierce competition, while others have been hit by bad luck. The result: thousands of canceled flights.</p>
+                  <time class="articles__list-item-date">Aug 6</time>
+                  <span class="articles__list-item-comments">342
+                    <svg>
+                      <use xlink:href="images/sprite.svg#review"></use>
+                    </svg>
+                  </span> 
+                  <span class="articles__list-item-likes">830
+                    <svg>
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </span> 
+                </div>           
+              </li>
+              <li class="articles__list-item">
+                <svg>
+                  <use xlink:href="images/sprite.svg#bookmark"></use>
+                </svg> 
+                <img class="articles__list-item-img" src="images/articles/articles-1.jpg" alt="">
+                <div class="articles__list-item-content">
+                  <span class="articles__list-item-subtitle">
+                    Flights
+                  </span>
+                  <h2 class="articles__list-item-title">
+                    Passengers Suffer as Crowded Field Puts Pressure on Europe’s Airlines
+                  </h2>
+                  <p class="articles__list-item-text">Weaker carriers have fallen by the wayside amid fierce competition, while others have been hit by bad luck. The result: thousands of canceled flights.</p>
+                  <time class="articles__list-item-date">Aug 6</time>
+                  <span class="articles__list-item-comments">342
+                    <svg>
+                      <use xlink:href="images/sprite.svg#review"></use>
+                    </svg>
+                  </span> 
+                  <span class="articles__list-item-likes">830
+                    <svg>
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </span> 
+                </div>           
+              </li>
+              <li class="articles__list-item">
+                <svg>
+                  <use xlink:href="images/sprite.svg#bookmark"></use>
+                </svg> 
+                <img class="articles__list-item-img" src="images/articles/articles-1.jpg" alt="">
+                <div class="articles__list-item-content">
+                  <span class="articles__list-item-subtitle">
+                    Flights
+                  </span>
+                  <h2 class="articles__list-item-title">
+                    Passengers Suffer as Crowded Field Puts Pressure on Europe’s Airlines
+                  </h2>
+                  <p class="articles__list-item-text">Weaker carriers have fallen by the wayside amid fierce competition, while others have been hit by bad luck. The result: thousands of canceled flights.</p>
+                  <time class="articles__list-item-date">Aug 6</time>
+                  <span class="articles__list-item-comments">342
+                    <svg>
+                      <use xlink:href="images/sprite.svg#review"></use>
+                    </svg>
+                  </span> 
+                  <span class="articles__list-item-likes">830
+                    <svg>
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </span> 
+                </div>           
+              </li>
+              <li class="articles__list-item">
+                <svg>
+                  <use xlink:href="images/sprite.svg#bookmark"></use>
+                </svg> 
+                <img class="articles__list-item-img" src="images/articles/articles-1.jpg" alt="">
+                <div class="articles__list-item-content">
+                  <span class="articles__list-item-subtitle">
+                    Flights
+                  </span>
+                  <h2 class="articles__list-item-title">
+                    Passengers Suffer as Crowded Field Puts Pressure on Europe’s Airlines
+                  </h2>
+                  <p class="articles__list-item-text">Weaker carriers have fallen by the wayside amid fierce competition, while others have been hit by bad luck. The result: thousands of canceled flights.</p>
+                  <time class="articles__list-item-date">Aug 6</time>
+                  <span class="articles__list-item-comments">342
+                    <svg>
+                      <use xlink:href="images/sprite.svg#review"></use>
+                    </svg>
+                  </span> 
+                  <span class="articles__list-item-likes">830
+                    <svg>
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </span> 
+                </div>           
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"></footer>
+
+    <script src="js/main.min.js"></script>
+  </body>
 </html>

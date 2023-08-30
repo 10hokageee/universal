@@ -1,0 +1,48 @@
+@import "mixin";
+
+body {
+  @extend %lato-400;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: #EDEFF0;;
+}
+
+.container {
+  max-width: 1180px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header-logo {
+  margin: 0 186px 0 130px;
+}
+
+.header-wrapper {
+  background-color: $bg-gray;
+}
+
+.btn {
+  padding: 10px 45px 10px 25px;
+  background-color: $dark-aqua;
+  color: $white;
+  border-radius: 20px;
+  position: relative;
+  border: 1px solid transparent;
+  @extend %transition;
+
+  &:hover {
+    border: 1px solid $white;
+    border-radius: 20px;
+    background-color: transparent;
+  }
+
+  & svg {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    fill: $white;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
