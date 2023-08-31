@@ -1175,3 +1175,140 @@
     }
   }
 }
+
+.footer {
+  padding: 70px 0 55px 0;
+  background-color: $white;
+  
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+  }
+
+  &__nav-list {
+    max-width: 165px;
+    width: 100%;
+    padding-top: 30px;
+    border-top: 5px solid $pink;
+
+    &--purple {
+      border-top: 5px solid $purple;
+    }
+
+    &--aqua {
+      border-top: 5px solid $dark-aqua;
+    }
+
+    &--orange {
+      border-top: 5px solid $orange;
+    }
+
+    &--green {
+      border-top: 5px solid $light-green;
+    }
+
+    &--aquagray {
+      border-top: 5px solid $aqua-gray;
+    }
+  }
+
+  &__nav-list-title {
+    color: $bg-gray;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 25px;
+  }
+
+  &__nav-list-item {
+    color: $dark-gray;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &:nth-child(1) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    margin-bottom: 40px;
+  }
+
+  &__bottom-link {
+    margin-right: 30px;
+  }
+
+  &__bottom-list {
+    display: flex;
+    margin-right: auto;
+  }
+
+  &__bottom-list-item {
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__bottom-socials {
+    display: flex;
+  }
+
+  &__bottom-socials-item {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__bottom-socials-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $dark-blue;
+    border-radius: 50%;
+
+    & svg {
+      width: 20px;
+      height: 20px;
+      fill: $white;
+    }
+
+    &--blue {
+      background-color: #4267b2;
+    }
+
+    &--aqua {
+      background-color: $dark-aqua;
+    }
+
+    &--pink {
+      background-color: $pink;
+    }
+
+    &--gray {
+      background-color: $bg-gray;
+    }
+  }
+
+  &__copy {
+    display: flex;
+    justify-content: space-between;
+    color: $light-gray;
+  }
+
+  &__copy-text {
+    max-width: 750px;
+  }
+}
