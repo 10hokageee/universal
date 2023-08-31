@@ -29,6 +29,7 @@ body {
   position: relative;
   border: 1px solid transparent;
   @extend %transition;
+  @extend %robotoslab-700;
 
   &:hover {
     border: 1px solid $white;
